@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { GearFill } from 'react-bootstrap-icons';
+import logo from './logo.svg'
 
 import PageButton from './components/PageButton';
 import ConnectButton from './components/ConnectButton';
@@ -48,6 +49,7 @@ function SwapPage() {
     provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
     setSigner(signer)
+    
   }
   const isConnected = () => signer !== undefined
   const getWalletAddress = () => {
@@ -93,6 +95,7 @@ function SwapPage() {
   return (
     <div className="swapMain">
       <div className="appNav">
+        <img src={logo} className="afroSwap" alt="AfroSwap logo"/>
         <div className="my-2 buttonContainer buttonContainerTop">
           Swap
         </div>

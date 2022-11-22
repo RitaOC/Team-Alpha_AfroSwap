@@ -1,4 +1,5 @@
 import React from 'react'
+import ethereum from '../ethereum.svg'
 
 const CurrencyField = props => {
   const getPrice = (value) => {
@@ -22,7 +23,12 @@ const CurrencyField = props => {
         )}
       </div>
       <div className="col-md-6 tokenContainer">
-        <span className="tokenName">{props.tokenName}</span>
+        <div className="tokenWrapper">
+          <span className="tokenName">
+            <img src={ethereum} className="ethereumIcon" alt="Ethereum Logo" /> 
+            {props.tokenName}
+          </span>
+        </div>
         <div className="balanceContainer">
           <span className="balanceAmount">Balance: {props.balance?.toFixed(3)}</span>
         </div>
