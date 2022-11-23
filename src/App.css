@@ -27,6 +27,7 @@ body {
   height: 76px;
 }
 .rightNav {
+  color: #FDFCFE;
   float: right;
 }
 
@@ -35,8 +36,11 @@ body {
 .pageButtonBold {
   font-weight: 800;
 }
-
+.strColor{
+  color: #FDFCFE;
+}
 .buttonContainer {
+  color: #FDFCFE;
   font-weight: 600;
   font-size: 24px;
   display: inline-block;

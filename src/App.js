@@ -1,14 +1,19 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import React from "react";
+import {Routes, Route, useNavigate} from 'react-router-dom';
+
+import { Landing } from '../src/components/Landing'
 import SwapPage from './SwapPage';
 
 function App() {
-
   return (
-    <div className="App">
-      <SwapPage />
-    </div>
-  )
+    <Routes>
+      <Route path="/swap" element={<SwapPage />} />
+      <Route path="/" element={<Landing />} />
+    </Routes>
+  );
 }
+
+
 
 export default App;

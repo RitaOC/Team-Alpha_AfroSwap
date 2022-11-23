@@ -73,6 +73,7 @@ function SwapPage() {
   if (signer !== undefined) {
     getWalletAddress()
   }
+  
 
   const getSwapPrice = (inputAmount) => {
     setLoading(true)

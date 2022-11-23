@@ -1,0 +1,117 @@
+#home {
+    color: white;
+  }
+  
+  #section-a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 50px;
+    gap: 50px;
+    margin-top: 85px;
+  }
+  
+  .Topic {
+    line-height: 2.5rem;
+    margin: auto;
+  }
+  div .stat-a {
+    display: inline;
+    color: #7b6e7f;
+    background-color: #f8d6fe;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    line-height: 4rem;
+  }
+  div .stat-b {
+    width: 80%;
+    padding-bottom: 20px;
+  }
+  div .stat-c {
+    width: 90%;
+    line-height: 1.5rem;
+    padding-bottom: 12px;
+  }
+  .swap {
+    text-decoration: none;
+    padding: 6px;
+    background-color: #cd36fb;
+    color: white;
+    margin-right: 24px;
+    border: none;
+    border-radius: 8px;
+  }
+  .learn {
+    color: #c239fb;
+    border: 1px solid #c239fb;
+    padding: 6px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .frame1 {
+    color: black;
+    overflow: hidden;
+  }
+  .frame1 img {
+    width: 100%;
+    height: 80%;
+  }
+  .frame2 {
+    color: black;
+  }
+  
+  .frame2 img {
+    height: 400px;
+    width: 100%;
+    padding: 30px 50px;
+    margin-bottom: 30px;
+  }
+  #section-b,
+  #section-c {
+    color: white;
+    text-align: center;
+  }
+  .Topic-b,
+  .Topic-c {
+    border: 2px solid #c239fb;
+    padding: 6px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  #section-c {
+    padding-bottom: 25px;
+  }
+  #section-c p {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  #section-c li {
+    margin-left: 30%;
+    font-size: 18px;
+    padding-bottom: 15px;
+    text-align: justify;
+  }
+  /* #4A1053
+  #811C91 */
+  @media only screen and (max-width: 650px) {
+    #section-a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 40px;
+    }
+    .frame2 img {
+      padding: 30px 20px;
+    }
+  
+    #section-c li,
+    #section-c p {
+      margin: auto;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: center;
+    }
+  }
+  

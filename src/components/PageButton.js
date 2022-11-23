@@ -3,7 +3,7 @@ import React from 'react'
 const PageButton = props => {
   return (
     <div className="btn">
-      <span className={props.isBold ? "pageButtonBold hoverBold" : "hoverBold"}>
+      <span className={props.isBold ? "pageButtonBold strColor hoverBold" : "hoverBold"}>
         {props.name}
       </span>
     </div>
