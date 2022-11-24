@@ -1,6 +1,6 @@
 #logo {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 76px;
   }
   :root {
     /* --mainColor: #29335c; */
@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    padding: 10px 140px;
+    padding: 10px 120px;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +23,12 @@
     border-bottom: 8px solid #cd36fb;
     background-color: #140416;
   }
-  /* #140416, #2d0c39 */
+  .name {
+    color: #fff;
+  }
+  nav {
+    padding-left: 400px;
+  }
   nav a {
     margin: 0 1rem;
     color: var(--textColor);
@@ -58,7 +63,14 @@
     border-radius: 5px;
     color: white;
   }
-  
+  @media only screen and (max-width: 1200px) {
+    header {
+      padding: 10px 20px;
+    }
+    header nav {
+      padding-left: 150px;
+    }
+  }
   @media only screen and (max-width: 800px) {
     header {
       padding: 10px 50px;
@@ -82,6 +94,7 @@
       background-color: var(--mainColorLight);
       transition: 1s;
       transform: translateY(-100vh);
+      padding-left: 0%;
     }
   
     header .responsive_nav {
@@ -101,4 +114,8 @@
       font-size: 1.2rem;
     }
   }
-  
+  @media only screen and (max-width: 350px) {
+    header {
+      padding: 10px 20px;
+    }
+  }

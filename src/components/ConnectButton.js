@@ -9,7 +9,7 @@ const ConnectButton = props => {
     <div>
       {isConnected() ? (
         <div className="buttonContainer">
-          <PageButton name={displayAddress}/>
+          <PageButton className="walletAddress" name={displayAddress}/>
         </div>
       ) : (
         <div

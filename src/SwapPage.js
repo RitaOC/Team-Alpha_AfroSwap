@@ -4,7 +4,6 @@ import { ethers } from 'ethers';
 import { GearFill } from 'react-bootstrap-icons';
 import logo from './logo.svg'
 
-import PageButton from './components/PageButton';
 import ConnectButton from './components/ConnectButton';
 import ConfigModal from './components/ConfigModal';
 import CurrencyField from './components/CurrencyField';
@@ -57,7 +56,6 @@ function SwapPage() {
       .then(address => {
         setSignerAddress(address)
 
-        // todo: connect weth and uni contracts
         wethContract.balanceOf(address)
           .then(res => {
             setWethAmount( Number(ethers.utils.formatEther(res)) )

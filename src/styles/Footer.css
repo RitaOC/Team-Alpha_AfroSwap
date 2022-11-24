@@ -1,0 +1,126 @@
+#footer {
+    color: white;
+    background-color: #4a1053;
+    padding: 30px 50px;
+  }
+  .footer-a {
+    text-align: center;
+    line-height: 2rem;
+    border: 2px solid #774b7e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .footer-a p {
+    padding-top: 15px;
+    font-size: 18px;
+  }
+  
+  .newsletter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .newsletter-a,
+  .subscribe {
+    width: 45%;
+  }
+  
+  .newsletter-a {
+    line-height: 1.6rem;
+    font-size: 14px;
+  }
+  form {
+    color: #7b6e7f;
+    background-color: #f8d6fe;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 7px;
+    border-radius: 5px;
+  }
+  form input {
+    color: #7b6e7f;
+    background-color: #f8d6fe;
+    border: none;
+  }
+  
+  form button {
+    background-color: #cd36fb;
+    padding: 5px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .logo2 {
+    width: 50px;
+    height: 50px;
+  }
+  .footer-b {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 2rem;
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 3rem;
+  }
+  
+  .footer-b p {
+    font-size: 14px;
+  }
+  .reserved {
+    color: #7b6e7f;
+    text-align: center;
+  }
+  .reserved span {
+    color: #fff;
+    font-size: 20px;
+    padding-right: 15px;
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .newsletter-a,
+    .subscribe {
+      width: 80%;
+    }
+    form {
+      padding-left: 5px;
+    }
+    form input {
+      font-size: 12px;
+    }
+    form button {
+      width: 40%;
+    }
+  }
+  @media only screen and (max-width: 350px) {
+    .newsletter-a,
+    .subscribe {
+      width: 98%;
+    }
+    form button {
+      width: 70%;
+    }
+    .reserved {
+      text-align: left;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .footer-b {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
