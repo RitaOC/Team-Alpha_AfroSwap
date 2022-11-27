@@ -70,4 +70,4 @@ function Landing() {
   );
 }
 
-export { Landing };
+export default Landing;

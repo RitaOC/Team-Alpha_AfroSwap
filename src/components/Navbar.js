@@ -28,22 +28,22 @@ function Navbar() {
 
     return (
         <header>
-        <div>
-            <img id="logo" src={logo} alt="Logo" />
-            <h2 className="name">AFROSWAP</h2>
-        </div>
-        <nav ref={navRef}>
-            <Link onClick={navigateHome}>Home</Link>
-            <a href="/#">About us</a>
-            <Link onClick={navigateContact}>Contact</Link>
-            <button className="wallet-connect" onClick={navigateToSwap}>Swap Token</button>
-            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <FaTimes />
+            <div>
+                <img id="logo" src={logo} alt="Logo" />
+                <h2 className="name">AFROSWAP</h2>
+            </div>
+            <nav ref={navRef}>
+                <a className="nav-white" href="/#">About us</a>
+                <a className="nav-white" onClick={navigateHome}>Home</a>
+                <a className="nav-white" onClick={navigateContact}>Contact</a>
+                <button className="wallet-connect" onClick={navigateToSwap}>Swap Token</button>
+                <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+                <FaTimes />
+                </button>
+            </nav>
+            <button className="nav-btn" onClick={showNavbar}>
+                <FaBars />
             </button>
-        </nav>
-        <button className="nav-btn" onClick={showNavbar}>
-            <FaBars />
-        </button>
         </header>
     );    
 }

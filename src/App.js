@@ -2,8 +2,8 @@ import './App.css';
 import React from "react";
 import {Routes, Route} from 'react-router-dom';
 
-import { Landing } from './Landing';
-import { Contact } from './Contact';
+import  Landing  from './Landing';
+import  Contact from './Contact';
 import SwapPage from './SwapPage';
 
 function App() {

@@ -9,7 +9,7 @@ import ConfigModal from './components/ConfigModal';
 import CurrencyField from './components/CurrencyField';
 
 import BeatLoader from "react-spinners/BeatLoader";
-import { getWethContract, getUniContract, getPrice, runSwap } from './AlphaRouterSevice'
+import { getWethContract, getUsdcContract, getPrice, runSwap } from './AlphaRouterSevice'
 
 function SwapPage() {
   const [provider, setProvider] = useState(undefined)
@@ -26,9 +26,9 @@ function SwapPage() {
   const [loading, setLoading] = useState(undefined)
   const [ratio, setRatio] = useState(undefined)
   const [wethContract, setWethContract] = useState(undefined)
-  const [uniContract, setUniContract] = useState(undefined)
+  const [usdcContract, setUsdcContract] = useState(undefined)
   const [wethAmount, setWethAmount] = useState(undefined)
-  const [uniAmount, setUniAmount] = useState(undefined)
+  const [usdcAmount, setUsdcAmount] = useState(undefined)
 
   useEffect(() => {
     const onLoad = async () => {
@@ -38,8 +38,8 @@ function SwapPage() {
       const wethContract = getWethContract()
       setWethContract(wethContract)
 
-      const uniContract = getUniContract()
-      setUniContract(uniContract)
+      const usdcContract = getUsdcContract()
+      setUsdcContract(usdcContract)
     }
     onLoad()
   }, [])
@@ -60,9 +60,9 @@ function SwapPage() {
           .then(res => {
             setWethAmount( Number(ethers.utils.formatEther(res)) )
           })
-        uniContract.balanceOf(address)
+        usdcContract.balanceOf(address)
           .then(res => {
-            setUniAmount( Number(ethers.utils.formatEther(res)) )
+            setUsdcAmount( Number(ethers.utils.formatEther(res)) )
           })
 
       })
@@ -137,10 +137,10 @@ function SwapPage() {
               balance={wethAmount} />
             <CurrencyField
               field="output"
-              tokenName="UNI"
+              tokenName="USDC"
               value={outputAmount}
               signer={signer}
-              balance={uniAmount}
+              balance={usdcAmount}
               spinner={BeatLoader}
               loading={loading} />
           </div>
@@ -148,7 +148,7 @@ function SwapPage() {
           <div className="ratioContainer">
             {ratio && (
               <>
-                {`1 UNI = ${ratio} WETH`}
+                {`1 USDC = ${ratio} WETH`}
               </>
             )}
           </div>
