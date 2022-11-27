@@ -1,10 +1,10 @@
-import './App.css';
+import "./App.css";
 import React from "react";
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
-import  Landing  from './Landing';
-import  Contact from './Contact';
-import SwapPage from './SwapPage';
+import Landing from "./components/Landing";
+import Contact from "./components/Contact";
+import SwapPage from "./SwapPage";
 
 function App() {
   return (
@@ -15,7 +15,5 @@ function App() {
     </Routes>
   );
 }
-
-
 
 export default App;
