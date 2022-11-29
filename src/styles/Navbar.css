@@ -1,90 +1,93 @@
 #logo {
-    width: 90px;
-    height: 76px;
+  width: 90px;
+  height: 76px;
 }
 :root {
-    /* --mainColor: #29335c; */
-    --mainColorLight: #e4a9ee;
-    --secondaryColor: #cd36fb;
-    --textColor: #eee;
+  /* --mainColor: #29335c; */
+  --mainColorLight: #e4a9ee;
+  --secondaryColor: #cd36fb;
+  --textColor: #eee;
 }
 
-.nav-white {
-    color: #eee;
-}
-  
 header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 80px;
-padding: 10px 120px;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 1;
-border-bottom: 8px solid #cd36fb;
-background-color: #140416;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 10px 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-bottom: 8px solid #cd36fb;
+  background-color: #140416;
 }
 .name {
-color: #fff;
+  color: #fff;
 }
 nav {
-padding-left: 400px;
+  padding-left: 400px;
 }
 nav a {
-margin: 0 1rem;
-color: #fff;
-text-decoration: none;
+  margin: 0 1rem;
+  color: var(--textColor);
+  text-decoration: none;
 }
 
 nav a:hover {
-color: var(--secondaryColor);
+  color: var(--secondaryColor);
 }
 
 header .nav-btn {
-padding: 5px;
-cursor: pointer;
-background: transparent;
-border: none;
-outline: none;
-color: var(--textColor);
-visibility: hidden;
-opacity: 0;
-font-size: 1.8rem;
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
 }
 
 header div,
 nav {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 .wallet-connect {
-background-color: #cd36fb;
-padding: 10px;
-border: none;
-border-radius: 5px;
-color: white;
+  background: linear-gradient(to left, #9847ff, #df31fa);
+  padding: 8px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  transition: 0.2 ease-in-out;
+}
+.wallet-connect:hover {
+  background: #fdfcfe;
+  border-color: #9847ff;
+  color: #c239fb;
+  border: 1px solid #c239fb;
 }
 @media only screen and (max-width: 1200px) {
-header {
+  header {
     padding: 10px 20px;
-}
-header nav {
+  }
+  header nav {
     padding-left: 150px;
-}
+  }
 }
 @media only screen and (max-width: 800px) {
-header {
+  header {
     padding: 10px 50px;
-}
-header .nav-btn {
+  }
+  header .nav-btn {
     visibility: visible;
     opacity: 1;
-}
+  }
 
-header nav {
+  header nav {
     position: fixed;
     top: 0;
     right: 0;
@@ -99,27 +102,27 @@ header nav {
     transition: 1s;
     transform: translateY(-100vh);
     padding-left: 0%;
-}
+  }
 
-header .responsive_nav {
+  header .responsive_nav {
     transform: none;
-}
+  }
 
-nav .nav-close-btn {
+  nav .nav-close-btn {
     position: absolute;
     top: 2rem;
     right: 2rem;
-}
+  }
 
-nav a {
+  nav a {
     font-size: 1.5rem;
-}
-.wallet-connect {
+  }
+  .wallet-connect {
     font-size: 1.2rem;
-}
+  }
 }
 @media only screen and (max-width: 350px) {
-header {
+  header {
     padding: 10px 20px;
-}
+  }
 }
