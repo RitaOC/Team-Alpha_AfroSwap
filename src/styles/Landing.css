@@ -1,5 +1,6 @@
 #home {
   color: white;
+  padding-top: 45px;
 }
 
 #section-a {
@@ -7,13 +8,14 @@
   flex-direction: row;
   justify-content: center;
   padding: 20px 50px;
-  gap: 50px;
+  padding-bottom: 60px;
+  /* gap: 40px; */
   margin-top: 85px;
 }
 
 .Topic {
   line-height: 2.5rem;
-  margin: auto;
+  /* margin: auto; */
 }
 div .stat-a {
   display: inline;
@@ -52,6 +54,7 @@ div .stat-c {
 .frame1 {
   color: black;
   overflow: hidden;
+  width: 70%;
 }
 .frame1 img {
   width: 100%;
@@ -92,9 +95,9 @@ div .stat-c {
   font-size: 18px;
   padding-bottom: 15px;
   text-align: justify;
+  list-style: none;
 }
-/* #4A1053
-  #811C91 */
+
 @media only screen and (max-width: 650px) {
   #section-a {
     display: flex;

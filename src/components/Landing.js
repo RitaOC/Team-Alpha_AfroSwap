@@ -24,7 +24,7 @@ function Landing() {
             </h1>
             <div className="stat-c">
               Transact more profitably on dozens of different networks and
-              hundrends of DEXs
+              hundrends of DEXs.
             </div>
             <div>
               <button className="swap" onClick={navigateToSwap}>
