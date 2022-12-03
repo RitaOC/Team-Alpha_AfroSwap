@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Testimonial from "./Testimonial";
 import frame1 from "../images/Frame1.png";
 import frame2 from "../images/Frame2.PNG";
 
@@ -65,6 +66,7 @@ function Landing() {
           </ul>
         </div>
       </section>
+      <Testimonial />
       <Footer />
     </>
   );
