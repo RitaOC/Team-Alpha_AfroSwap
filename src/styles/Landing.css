@@ -90,11 +90,16 @@ div .stat-c {
   font-size: 20px;
   padding-bottom: 20px;
 }
+.listing {
+  text-align: center;
+}
+.listing ul {
+  display: inline-block;
+  text-align: left;
+}
 #section-c li {
-  margin-left: 30%;
   font-size: 18px;
   padding-bottom: 15px;
-  text-align: justify;
   list-style: none;
 }
 

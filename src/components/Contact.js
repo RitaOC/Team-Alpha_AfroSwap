@@ -1,6 +1,23 @@
 import React from "react";
 import Navbar from "./Navbar";
 import "../styles/Contact.css";
+// toast
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// notification
+const notify = () => {
+  toast.success("Sent!", {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+};
 
 function Contact() {
   return (
@@ -18,7 +35,9 @@ function Contact() {
 
           <form className="contact-card-b">
             <div class="form-group">
-              <label for="inputAddress">Full Name</label>
+              <label for="inputAddress" aria-required>
+                Full Name
+              </label>
               <input
                 type="text"
                 class="form-control"
@@ -62,9 +81,15 @@ function Contact() {
               ></textarea>
             </div>
 
-            <button id="contact-btn" type="submit" class="btn btn-primary">
+            <button
+              onClick={notify}
+              id="contact-btn"
+              type="submit"
+              class="btn btn-primary"
+            >
               Send
             </button>
+            <ToastContainer />
           </form>
         </div>
       </section>
