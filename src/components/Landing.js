@@ -31,9 +31,9 @@ function Landing() {
               <button className="swap" onClick={navigateToSwap}>
                 Swap Tokens
               </button>
-              <button className="learn" href="#section-c">
-                Learn More
-              </button>
+              <a href="#section-c">
+                <button className="learn">Learn More</button>
+              </a>
             </div>
           </div>
           <div className="frame1">
@@ -54,14 +54,18 @@ function Landing() {
         <h2 className="Topic-c">Learn More</h2>
         <p>Step by Step process to effectively Swap Token on Afroswap</p>
 
-        <div>
+        <div className="listing">
           <ul>
             <li>
-              Connect to your Metamask wallet,by clicking on connect wallet
+              Click on the Swap Token button and connect to your Metamask
+              wallet,by clicking on connect wallet button
             </li>
             <li>Ensure your are on Goerli Testnet</li>
+            <li>
+              The slippage tolerance and transaction deadline is set by default,
+              but can be changed by clickingon the gear icon(Optional)
+            </li>
             <li>Click on Swap Tokens</li>
-            <li>Select the desired tokens to swap</li>
             <li>And thats all,very simple</li>
           </ul>
         </div>
