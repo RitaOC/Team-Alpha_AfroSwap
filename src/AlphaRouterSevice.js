@@ -5,21 +5,21 @@ const JSBI = require('jsbi');
 const ERC20ABI = require('./abi.json');
 
 const V3_SWAP_ROUTER_ADDRESS = '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45';
-const INFURA_URL_TESTNET = process.env.REACT_APP_INFURA_URL_TESTNET;
+const ALCHEMY_URL_TESTNET = process.env.REACT_APP_ALCHEMY_URL_TESTNET;
 
-const chainId = 1;
-const web3Provider = new ethers.providers.JsonRpcProvider(INFURA_URL_TESTNET);
+const chainId = 5;
+const web3Provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.g.alchemy.com/v2/rERViZCWRmskcJ23cVrYQsouDXwBCnGY");
 const router = new AlphaRouter({ chainId: chainId, provider: web3Provider });
 
-const name0 = 'Wrapped Ether';
-const symbol0 = 'WETH';
+const name0 = 'Chainlink Token';
+const symbol0 = 'LINK';
 const decimals0 = 18;
-const address0 = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2';
+const address0 = '0x326C977E6efc84E512bB9C30f76E30c160eD06FB';
 
 const name1 = 'USD//C';
 const symbol1 = 'USDC';
 const decimals1 = 6;
-const address1 = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48';
+const address1 = '0x07865c6E87B9F70255377e024ace6630C1Eaa37F';
 
 const WETH = new Token(chainId, address0, decimals0, symbol0, name0);
 const USDC = new Token(chainId, address1, decimals1, symbol1, name1);
