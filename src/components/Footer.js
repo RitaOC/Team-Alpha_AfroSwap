@@ -1,7 +1,23 @@
 import React from "react";
 import "../styles/Footer.css";
 import logo2 from "../images/logo2.png";
+// toast
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+// notification
+const notify = () => {
+  toast.success("Sent!", {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+};
 function Footer() {
   return (
     <>
@@ -16,8 +32,11 @@ function Footer() {
             <div className="subscribe">
               <form action="" method="get">
                 <input type="email" placeholder="Email Address" />
-                <button type="submit">Subscribe</button>
+                <button onClick={notify} type="submit">
+                  Subscribe
+                </button>
               </form>
+              <ToastContainer />
             </div>
           </div>
         </div>
