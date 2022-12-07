@@ -9,7 +9,7 @@ import ConfigModal from './components/ConfigModal';
 import CurrencyField from './components/CurrencyField';
 
 import BeatLoader from "react-spinners/BeatLoader";
-import { getWethContract, getUsdcContract, getPrice, runSwap } from './AlphaRouterSevice'
+import { getLinkContract, getUsdcContract, getPrice, runSwap } from './AlphaRouterSevice'
 
 function SwapPage() {
   const [provider, setProvider] = useState(undefined)
@@ -25,9 +25,9 @@ function SwapPage() {
   const [transaction, setTransaction] = useState(undefined)
   const [loading, setLoading] = useState(undefined)
   const [ratio, setRatio] = useState(undefined)
-  const [wethContract, setWethContract] = useState(undefined)
+  const [linkContract, setLinkContract] = useState(undefined)
   const [usdcContract, setUsdcContract] = useState(undefined)
-  const [wethAmount, setWethAmount] = useState(undefined)
+  const [linkAmount, setLinkAmount] = useState(undefined)
   const [usdcAmount, setUsdcAmount] = useState(undefined)
 
   useEffect(() => {
@@ -35,8 +35,8 @@ function SwapPage() {
       const provider = await new ethers.providers.Web3Provider(window.ethereum)
       setProvider(provider)
 
-      const wethContract = getWethContract()
-      setWethContract(wethContract)
+      const linkContract = getLinkContract()
+      setLinkContract(linkContract)
 
       const usdcContract = getUsdcContract()
       setUsdcContract(usdcContract)
@@ -56,9 +56,9 @@ function SwapPage() {
       .then(address => {
         setSignerAddress(address)
 
-        wethContract.balanceOf(address)
+        linkContract.balanceOf(address)
           .then(res => {
-            setWethAmount( Number(ethers.utils.formatEther(res)) )
+            setLinkAmount( Number(ethers.utils.formatEther(res)) )
           })
         usdcContract.balanceOf(address)
           .then(res => {
@@ -131,10 +131,10 @@ function SwapPage() {
           <div className="swapBody">
             <CurrencyField
               field="input"
-              tokenName="WETH"
+              tokenName="LINK"
               getSwapPrice={getSwapPrice}
               signer={signer}
-              balance={wethAmount} />
+              balance={linkAmount} />
             <CurrencyField
               field="output"
               tokenName="USDC"
@@ -148,7 +148,7 @@ function SwapPage() {
           <div className="ratioContainer">
             {ratio && (
               <>
-                {`1 USDC = ${ratio} WETH`}
+                {`1 USDC = ${ratio} LINK`}
               </>
             )}
           </div>

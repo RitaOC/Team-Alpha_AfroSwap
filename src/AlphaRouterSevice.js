@@ -21,16 +21,16 @@ const symbol1 = 'USDC';
 const decimals1 = 6;
 const address1 = '0x07865c6E87B9F70255377e024ace6630C1Eaa37F';
 
-const WETH = new Token(chainId, address0, decimals0, symbol0, name0);
+const LINK = new Token(chainId, address0, decimals0, symbol0, name0);
 const USDC = new Token(chainId, address1, decimals1, symbol1, name1);
 
-export const getWethContract = () => new ethers.Contract(address0, ERC20ABI, web3Provider);
+export const getLinkContract = () => new ethers.Contract(address0, ERC20ABI, web3Provider);
 export const getUsdcContract = () => new ethers.Contract(address1, ERC20ABI, web3Provider);
 
 export const getPrice = async (inputAmount, slippageAmount, deadline, walletAddress) => {
   const percentSlippage = new Percent(slippageAmount, 100);
   const wei = ethers.utils.parseUnits(inputAmount.toString(), decimals0);
-  const currencyAmount = CurrencyAmount.fromRawAmount(WETH, JSBI.BigInt(wei));
+  const currencyAmount = CurrencyAmount.fromRawAmount(LINK, JSBI.BigInt(wei));
 
   const route = await router.route(
     currencyAmount,
@@ -69,7 +69,7 @@ export const getPrice = async (inputAmount, slippageAmount, deadline, walletAddr
 
 export const runSwap = async (transaction, signer) => {
   const approvalAmount = ethers.utils.parseUnits('10', 18).toString();
-  const contract0 = getWethContract();
+  const contract0 = getLinkContract();
   await contract0.connect(signer).approve(
     V3_SWAP_ROUTER_ADDRESS,
     approvalAmount
