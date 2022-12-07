@@ -21,7 +21,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <img src={logo2} alt="logo" srcset="" className="logo2" />
+        <img src={logo2} alt="logo" srcSet="" className="logo2" />
         <div className="footer-b">
           <div>
             <h4>Products</h4>
