@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 const notify = () => {
   toast.success("Sent!", {
     position: "top-center",
-    autoClose: 5000,
+    autoClose: 2000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -35,9 +35,7 @@ function Contact() {
 
           <form className="contact-card-b">
             <div class="form-group">
-              <label for="inputAddress" aria-required>
-                Full Name
-              </label>
+              <label for="inputAddress">Full Name</label>
               <input
                 type="text"
                 class="form-control"

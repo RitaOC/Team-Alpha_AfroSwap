@@ -63,7 +63,7 @@ function Landing() {
             <li>Ensure your are on Goerli Testnet</li>
             <li>
               The slippage tolerance and transaction deadline is set by default,
-              but can be changed by clickingon the gear icon(Optional)
+              but can be changed by clicking on the gear icon(Optional)
             </li>
             <li>Click on Swap Tokens</li>
             <li>And thats all,very simple</li>
